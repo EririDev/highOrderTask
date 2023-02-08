@@ -56,8 +56,8 @@ const jumlahTotalTrue = jumlahSetiapTrue.reduce((a, b) => a + b);
 // const jumlahTotalFalse = jumlahSetiapFalse.reduce((a, b) => a + b);
 
 personnel.forEach((loop) => {
-  document.write(`<div class ="card">
-    <br>Id = ${loop.id}<br>
+   document.write(`<div>
+    Id = ${loop.id}<br>
     Nama = ${loop.name}<br>
     Piloting Score = ${loop.pilotingScore}<br>
     Shooting Score = ${loop.shootingScore}<br>
@@ -65,7 +65,7 @@ personnel.forEach((loop) => {
 </div>`);
   if (loop.isForceUser === true) {
     const skorPemain = loop.pilotingScore+loop.shootingScore
-    document.write(`<div>Total Skor = ${skorPemain}<br><div>`);
+    document.write(`<div>Total Skor ${loop.name} = ${skorPemain}<br></div>`);
   }
 });
-document.write(`<hr>Skor Total True = ${jumlahTotalTrue}`)
+document.write(`<div>Skor Total True  = ${jumlahTotalTrue}</div>`)
